@@ -1,4 +1,4 @@
-var Greeter = require('./Greeter');
+var Greeter = require('Greeter');
 
 var firstName = 'Andrew';
 
