@@ -1,3 +1,5 @@
+var React = require('react');
+
 var GreeterForm = React.createClass({
 	onButtonClick: function (e) {
 		e.preventDefault();

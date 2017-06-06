@@ -1,3 +1,5 @@
+var React = require('react');
+
 var GreeterMessage = require('GreeterMessage');
 var GreeterForm = require('GreeterForm');
 

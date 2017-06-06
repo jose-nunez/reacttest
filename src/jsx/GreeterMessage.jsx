@@ -1,3 +1,5 @@
+var React = require('react');
+
 var GreeterMessage = React.createClass({
 	getDefaultProps: function () {
 		return {
