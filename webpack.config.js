@@ -10,9 +10,7 @@ module.exports = {
 	resolve: {
 		root: __dirname,
 		alias: {
-			Greeter: './Greeter.jsx',
-			GreeterMessage: './GreeterMessage.jsx',
-			GreeterForm: './GreeterForm.jsx',
+			Main: './Main.jsx',
 		},
 		extensions: ['','.js', '.jsx']
 	},

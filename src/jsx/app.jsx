@@ -1,11 +1,14 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Greeter = require('Greeter');
 
-var firstName = 'Andrew';
+var {Route,Router,IndexRoute,hasHistory} = require('react-router');
+
+var Main = require('Main');
 
 ReactDOM.render(
-	// <Greeter name={firstName} message1="holita"/>,
-	<Greeter name={firstName} />,
+	<Router history={hasHistory}>
+		<Route path="/" component={Main}>
+		</Route>
+	</Router>,
 	document.getElementById('app')
 );
