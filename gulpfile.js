@@ -20,12 +20,6 @@ var jsx_src = src_dir+'jsx/**/*.jsx';
 var jsx_index = src_dir+'jsx/app.jsx';
 var jsx_build = build_dir+'js/';
 
-var lib_src = [
-	lib_dir+'react/dist/react.min.js',
-	lib_dir+'react-dom/dist/react-dom.min.js',
-];
-var lib_build = build_dir+'lib/';
-
 var html_src = src_dir+'**/*.html';
 var html_build = build_dir;
 
@@ -52,15 +46,6 @@ gulp.task('jsx_w', function(){gulp.watch(jsx_src,['jsx']);});
 gulp.task('jsx_watch',['jsx','jsx_w']);
 tasks.once.push('jsx');
 tasks.watch.push('jsx_w');
-
-
-/* JS LIBRARIES ____________________________________________________________________________*/
-gulp.task('lib', function() {
-	gulp.src(lib_src,{base:lib_dir})
-		.pipe(uglify())
-		.pipe(gulp.dest(lib_build))
-});
-tasks.once.push('lib');
 
 /* HTML ____________________________________________________________________________*/
 gulp.task('html',function(){
