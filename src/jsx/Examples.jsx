@@ -1,12 +1,7 @@
 var React = require('react');
 
-class Examples extends React.Component {
-	render(){
-		return (
-			<h2>ESTE ES EL Examples</h2>
-		);
-	}
-}
-
+const Examples = ({match})=>(
+	<h2>ESTE ES EL Examples {match? match.url : 'nada por aca' }</h2>
+);
 
 module.exports = Examples;

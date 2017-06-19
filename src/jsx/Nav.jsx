@@ -1,12 +1,12 @@
 var React = require('react');
+import { Link } from 'react-router-dom';
 
-class Nav extends React.Component {
-	render(){
-		return (
-			<div>ESTE ES EL NAVITO</div>
-		);
-	}
-}
-
+const Nav = ()=>(
+	<ul>
+		<li><Link to="/">Weather</Link></li>
+		<li><Link to="/about">About</Link></li>
+		<li><Link to="/examples">Examples</Link></li>
+	</ul>
+);
 
 module.exports = Nav;

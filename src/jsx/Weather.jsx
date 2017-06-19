@@ -1,12 +1,15 @@
 var React = require('react');
 
-class Weather extends React.Component {
-	render(){
-		return (
-			<h2>ESTE ES EL Weather</h2>
-		);
-	}
-}
+/*const Weather = (obj)=>(
+	<h2>ESTE ES EL Weather mmm {obj.match? obj.match.url : 'nada por aca' }</h2>
+);*/
+
+const Weather = function({match}){
+	return (
+		<h2>ESTE ES EL Weather mmm {match? match.url : 'nada por aca' } {console.log(arguments)}</h2>
+	);
+};
 
 
 module.exports = Weather;
+

@@ -1,20 +1,12 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {BrowserRouter} from 'react-router-dom';
 
-var {Route,Router,IndexRoute,hasHistory} = require('react-router');
-
-var Main = require('Main');
-var Weather = require('Weather');
-var About = require('About');
-var Examples = require('Examples');
+import Main from 'Main';
 
 ReactDOM.render(
-	<Router history={hasHistory}>
-		<Route path="/" component={Main}>
-			<IndexRoute component={Weather}/>
-			<Route path="about" component={About}/>
-			<Route path="examples" component={Examples}/>
-		</Route>
-	</Router>,
+	<BrowserRouter>
+		<Main />
+	</BrowserRouter>,
 	document.getElementById('app')
 );
