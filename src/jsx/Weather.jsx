@@ -6,7 +6,7 @@ var React = require('react');
 
 const Weather = function({match}){
 	return (
-		<h2>ESTE ES EL Weather mmm {match? match.url : 'nada por aca' } {console.log(arguments)}</h2>
+		<h2>ESTE ES EL Weather mmm {match? match.url : 'nada por aca' }</h2>
 	);
 };
 
