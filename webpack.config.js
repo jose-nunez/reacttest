@@ -5,10 +5,9 @@ module.exports = {
 	entry: './src/jsx/app.jsx',
 	output: {
 		path: __dirname,
-		filename:'./main.js'
+		filename:'./dist/js/main.js'
 	},
 	resolve: {
-		root: __dirname,
 		alias: {
 			Main: './Main.jsx',
 			Nav: './Nav.jsx',
@@ -16,7 +15,7 @@ module.exports = {
 			About: './About.jsx',
 			Examples: './Examples.jsx',
 		},
-		extensions: ['','.js', '.jsx']
+		extensions: ['.js', '.jsx']
 	},
 	module: {
 	loaders: [

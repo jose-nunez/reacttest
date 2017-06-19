@@ -12,13 +12,10 @@ var htmlmin = require('gulp-htmlmin');
 	ALWAYS FINISH DIRECTORIES WITH SLASH '/'
 */
 
-var lib_dir = './node_modules/';
-var src_dir = "./src/";
-var build_dir = "./dist/";
 
-var jsx_src = src_dir+'jsx/**/*.jsx';
-var jsx_index = src_dir+'jsx/app.jsx';
-var jsx_build = build_dir+'js/';
+// var jsx_src = src_dir+'jsx/**/*.jsx';
+// var jsx_index = src_dir+'jsx/app.jsx';
+// var jsx_build = build_dir+'js/';
 
 var html_src = src_dir+'**/*.html';
 var html_build = build_dir;
@@ -33,7 +30,7 @@ var tasks = {
 
 /* JSX ____________________________________________________________________________*/
 
-gulp.task('jsx', () =>
+/*gulp.task('jsx', () =>
 	gulp.src(jsx_src)
 	.pipe(webpack(require('./webpack.config.js')))
 		.pipe(gulp.dest(jsx_build))
@@ -45,7 +42,7 @@ gulp.task('jsx', () =>
 gulp.task('jsx_w', function(){gulp.watch(jsx_src,['jsx']);});
 gulp.task('jsx_watch',['jsx','jsx_w']);
 tasks.once.push('jsx');
-tasks.watch.push('jsx_w');
+tasks.watch.push('jsx_w');*/
 
 /* HTML ____________________________________________________________________________*/
 gulp.task('html',function(){
