@@ -1,7 +1,7 @@
-var React = require('react');
+import React from 'react';
 
 const Examples = ({match})=>(
-	<h2>ESTE ES EL Examples {match? match.url : 'nada por aca' }</h2>
+	<h3>Examples</h3>
 );
 
 module.exports = Examples;

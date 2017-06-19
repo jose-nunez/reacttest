@@ -8,14 +8,10 @@ import Examples from 'Examples';
 
 
 const Main = ()=>{
-
-	var puta = 'puta la wea que rarifico';
-
 	return (
 		<div>
 			<Nav/>
-			<h2>Aer que wa</h2>		
-			{puta}
+			<h2>My React App</h2>
 			<Switch>
 				<Route exact path='/' component={Weather}/>
 				<Route path='/about' component={About}/>

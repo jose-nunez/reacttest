@@ -1,12 +1,13 @@
-var React = require('react');
+import React from 'react';
+import WeatherForm from 'WeatherForm';
 
-/*const Weather = (obj)=>(
-	<h2>ESTE ES EL Weather mmm {obj.match? obj.match.url : 'nada por aca' }</h2>
-);*/
 
 const Weather = function({match}){
 	return (
-		<h2>ESTE ES EL Weather mmm {match? match.url : 'nada por aca' }</h2>
+		<div>
+			<h2>Weather Component</h2>
+			<WeatherForm />
+		</div>
 	);
 };
 

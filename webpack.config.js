@@ -12,6 +12,7 @@ module.exports = {
 			Main: './Main.jsx',
 			Nav: './Nav.jsx',
 			Weather: './Weather.jsx',
+			WeatherForm: './WeatherForm.jsx',
 			About: './About.jsx',
 			Examples: './Examples.jsx',
 		},
