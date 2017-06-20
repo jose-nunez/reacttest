@@ -13,6 +13,7 @@ module.exports = {
 			Nav: './Nav.jsx',
 			Weather: './Weather.jsx',
 			WeatherForm: './WeatherForm.jsx',
+			WeatherMessage: './WeatherMessage.jsx',
 			About: './About.jsx',
 			Examples: './Examples.jsx',
 		},
