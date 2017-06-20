@@ -1,8 +1,20 @@
 import React from 'react';
 
-const WeatherMessage = ()=> (
-	<h2>This is the message</h2>
-);
+
+class WeatherMessage extends React.Component{
+	constructor(props) {
+		super(props);
+	}
+
+	render(){
+
+		var {location,temp} = this.props.status;
+
+		return (
+			<h2>This is the message: {location} - {temp}</h2>
+		);
+	}
+}
 
 
 module.exports = WeatherMessage;
