@@ -13,14 +13,14 @@ var openWeatherMap = {
 		return axios.get(requestUrl).then(
 			(resp)=>{
 				if(resp.data.cod && resp.data.message){
-					throw new Error(err.data.message);
+					throw new Error(resp.data.message);
 				}
 				else{
 					return resp.data.main.temp;
 				}
 			},
-			(err)=>{
-				throw new Error(err.data.message);
+			function(err){
+				throw new Error(err.response.data.message);
 			}
 		);
 	}

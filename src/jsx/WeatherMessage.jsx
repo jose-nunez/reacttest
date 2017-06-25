@@ -11,7 +11,10 @@ class WeatherMessage extends React.Component{
 		var {location,temp} = this.props.status;
 
 		return (
-			<h2>This is the message: {location} - {temp}</h2>
+			(location && temp)? 
+				<h2>This is the message: {location}: {temp}</h2> 
+			:
+				<h2></h2> 
 		);
 	}
 }

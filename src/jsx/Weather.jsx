@@ -10,25 +10,47 @@ class Weather extends React.Component{
 		super(props);
 		this.handleSearch = this.handleSearch.bind(this);
 
-		this.state = {location: 'santiago,cl',temp:-99};
+		this.state = {isLoading:false,location:'',temp:''};
 	}
 
+	renderMessage(){
+		var {isLoading} = this.state;		
+		if(isLoading){
+			return <h2>Cargando ctm</h2>;
+
+		}
+		else{
+			return <WeatherMessage status={this.state} />;
+		}
+	}
 	handleSearch(location){
+		this.setState({isLoading:true});
+
 		openWeatherMap.getTemp(location).then(
 			(temp)=>this.setState({
 				location: location,
 				temp:temp,
+				isLoading:false,
 			}),
-			(err)=>alert(err.message)
+			(err)=>{
+				this.setState({
+					isLoading:false,
+					location:null,
+					temp:null,
+				});
+				alert(err.message);
+			}
 		);
 	}
 
 	render(){
+		var {isLoading,temp,location} = this.state;
+
 		return (
 			<div>
 				<h2>Weather Component</h2>
 				<WeatherForm onSearch={this.handleSearch} location={this.state.location}/>
-				<WeatherMessage status={this.state} />
+				{this.renderMessage()}
 			</div>
 		);
 	}
