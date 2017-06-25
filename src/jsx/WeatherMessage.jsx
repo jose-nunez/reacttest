@@ -1,22 +1,14 @@
 import React from 'react';
 
 
-class WeatherMessage extends React.Component{
-	constructor(props) {
-		super(props);
-	}
-
-	render(){
-
-		var {location,temp} = this.props.status;
-
-		return (
-			(location && temp)? 
-				<h2>This is the message: {location}: {temp}</h2> 
-			:
-				<h2></h2> 
-		);
-	}
+const WeatherMessage = (props)=>{
+	var {location,temp} = props.status;
+	return (
+		(location && temp)? 
+			<h2>This is the message, mate: {location}: {temp}</h2> 
+		:
+			<h2></h2> 
+	);
 }
 
 
