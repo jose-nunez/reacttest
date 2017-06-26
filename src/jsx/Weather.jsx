@@ -20,7 +20,7 @@ class Weather extends React.Component{
 
 		}
 		else{
-			return <WeatherMessage status={this.state} />;
+			return <WeatherMessage location={this.state.location} temp={this.state.temp} />;
 		}
 	}
 	handleSearch(location){

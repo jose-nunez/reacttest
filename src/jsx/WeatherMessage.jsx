@@ -1,8 +1,7 @@
 import React from 'react';
 
 
-const WeatherMessage = (props)=>{
-	var {location,temp} = props.status;
+const WeatherMessage = ({location,temp})=>{
 	return (
 		(location && temp)? 
 			<h2>This is the message, mate: {location}: {temp}</h2> 
