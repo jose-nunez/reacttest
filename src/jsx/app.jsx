@@ -4,6 +4,9 @@ import {BrowserRouter} from 'react-router-dom';
 
 import Main from 'Main';
 
+require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css')
+$(document).foundation();
+
 ReactDOM.render(
 	<BrowserRouter>
 		<Main />
