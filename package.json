@@ -4,11 +4,14 @@
   "description": "Simple react app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": "Pepillo",
+  "author": "Jose Nunez",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.16.2",
+    "express": "^4.15.3",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1"
