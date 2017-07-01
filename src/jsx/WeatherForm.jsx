@@ -29,7 +29,9 @@ class WeatherForm extends React.Component{
 			<div>
 				<form onSubmit={this.onFormSubmit}>
 					<input type="text" value={this.state.location} onChange={this.onTextChange} />
-					<button>Obtain weather</button>
+					<div className="text-center">
+						<input type="submit" className="button" value="Obtain weather" />
+					</div>
 				</form>
 			</div>
 		);

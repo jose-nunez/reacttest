@@ -13,7 +13,7 @@ const Main = ()=>{
 			<Nav/>
 			<h2>My React App</h2>
 			<div className="grid-x" style={{justifyContent:'center'}}>
-				<div className="medium-6 large-4 small-centered" style={{'backgroundColor':'red'}}>
+				<div className="medium-6 large-4 small-centered" >
 					<Switch>
 						<Route exact path='/' component={Weather}/>
 						<Route path='/about' component={About}/>
