@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import FacebookLogin from 'react-facebook-login';
 
 class Nav extends React.Component{
 
@@ -39,20 +38,12 @@ class Nav extends React.Component{
 						</ul>
 					</div>
 					<div className="top-bar-right">
-							<ul className="menu">
-								<li>
-									<FacebookLogin
-										appId="413606152373027"
-										autoLoad={true}
-										fields="name,email,picture"
-										// onClick={componentClicked}
-										callback={this.responseFacebook} />
-								</li>
-								<form onSubmit={this.onFormSubmit}>
-									<li><input type="text" value={this.state.location} onChange={this.onTextChange} placeholder="City name"/></li>
-									<li><input type="submit" className="button" value="Get weather" /></li>
-								</form>
-							</ul>
+						<form onSubmit={this.onFormSubmit}>
+						<ul className="menu">
+								<li><input type="text" value={this.state.location} onChange={this.onTextChange} placeholder="City name"/></li>
+								<li><input type="submit" className="button" value="Get weather" /></li>
+						</ul>
+						</form>
 					</div>
 				</div>
 		);
