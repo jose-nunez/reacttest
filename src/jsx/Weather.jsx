@@ -64,7 +64,7 @@ class Weather extends React.Component{
 
 		return (
 			<div>
-				<h2>Get Weather</h2>
+				<h2 className="text-center page-title">Get Weather</h2>
 				<WeatherForm onSearch={this.handleSearch} location={this.state.location}/>
 				{this.renderMessage()}
 				{this.renderError()}

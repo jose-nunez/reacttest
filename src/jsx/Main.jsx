@@ -11,7 +11,6 @@ const Main = ()=>{
 	return (
 		<div>
 			<Nav/>
-			<h2>My React App</h2>
 			<div className="grid-x" style={{justifyContent:'center'}}>
 				<div className="medium-6 large-4 small-centered" >
 					<Switch>
