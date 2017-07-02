@@ -11,7 +11,7 @@ const Main = ()=>{
 	return (
 		<div>
 			<Nav/>
-			<div className="grid-x" style={{justifyContent:'center'}}>
+			<div id="mainContainer" className="grid-x" style={{justifyContent:'center'}}>
 				<div className="medium-6 large-4 small-centered" >
 					<Switch>
 						<Route exact path='/' component={Weather}/>

@@ -33,21 +33,25 @@ module.exports = {
 			Examples: './Examples.jsx',
 			openWeatherMap: './api/openWeatherMap.jsx',
 			ErrorModal: './ErrorModal.jsx',
-			appStyles: '../styles/app.css',
+			appStyles: '../styles/app.scss',
 		},
 		extensions: ['.js', '.jsx']
 	},
 	module: {
 		loaders: [
 			{
+				test: /\.jsx?$/,
 				loader: 'babel-loader',
 				query: {
 					presets: ['react', 'es2015','stage-0']
 				},
-				test: /\.jsx?$/,
 				exclude: /(node_modules|bower_components)/
+			},
+			{
+				test: /\.scss$/,
+				loaders: ["style-loader","css-loader?sourceMap","sass-loader?sourceMap"]
 			}
-		]
+		],
 	},
 	devtool:'cheap-module-eval-source-map'
 };
