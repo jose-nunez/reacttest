@@ -30,10 +30,7 @@ class Weather extends React.Component{
 		var {errorMessage} = this.state;		
 		if(typeof errorMessage ==='string'){
 			return (
-				/*
 				<ErrorModal message={this.state.errorMessage} />
-				*/
-				<ErrorModal />
 			);
 		}
 	}
@@ -54,7 +51,6 @@ class Weather extends React.Component{
 					temp:null,
 					errorMessage:err.message
 				});
-				// alert(err.message);
 			}
 		);
 	}
