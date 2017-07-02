@@ -4,7 +4,7 @@ import {BrowserRouter} from 'react-router-dom';
 
 import Main from 'Main';
 
-require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css')
+require('foundation-sites/dist/css/foundation.css')
 $(document).foundation();
 import 'appStyles';
 

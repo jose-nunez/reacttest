@@ -10,7 +10,7 @@ module.exports = {
 		'./src/jsx/app.jsx',
 	],
 	externals:{
-		jquery: 'jQuery'
+		'jquery': 'jQuery',
 	},
 	plugins:[
 		new webpack.ProvidePlugin({
@@ -48,9 +48,13 @@ module.exports = {
 				exclude: /(node_modules|bower_components)/
 			},
 			{
+				test: /\.css$/,
+				loaders: ["style-loader","css-loader?sourceMap"]
+			},
+			{
 				test: /\.scss$/,
 				loaders: ["style-loader","css-loader?sourceMap","sass-loader?sourceMap"]
-			}
+			},
 		],
 	},
 	devtool:'cheap-module-eval-source-map'
