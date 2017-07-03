@@ -6,16 +6,19 @@ class WeatherForm extends React.Component{
 		this.onFormSubmit = this.onFormSubmit.bind(this);
 		this.onTextChange = this.onTextChange.bind(this);
 
-		this.state = {location: this.props.location?this.props.location:'dgdfgdfgd34t'};
-
+		// this.state = {location: this.props.location?this.props.location:'dgdfgdfgd34t'};
+		this.state = {location: this.props.location?this.props.location:''};
 	}
+
+	/*componentWillReceiveProps({location}){
+		this.setState({location:location});
+	}*/
 
 	onFormSubmit(e){
 		e.preventDefault();
-		
 		var location = this.state.location;
-		
 		if(location.length>0){
+			this.setState({location:''});
 			this.props.onSearch(location);
 		}
 	}

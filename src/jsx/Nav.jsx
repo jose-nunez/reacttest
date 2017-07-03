@@ -1,23 +1,33 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class Nav extends React.Component{
 
 		constructor(props){
 			super(props);
 			this.onFormSubmit = this.onFormSubmit.bind(this);
-			this.state = {location: this.props.location};
+			this.onTextChange = this.onTextChange.bind(this);
+			this.state = {location:''};
 		}
 
-
-		responseFacebook(response){
-			console.log(response);
-		}
-
+		static contextTypes = {
+			router: PropTypes.object
+		};
 
 		onFormSubmit(e){
 			e.preventDefault();
-			alert('Calmeichun');
+			var encodedLocation = encodeURIComponent(this.state.location);
+
+			if(encodedLocation.length>0){
+				this.setState({location:''});
+				// window.location = "/?location="+encodedLocation;
+				// this.props.history.push('/?location='+encodedLocation);
+				this.context.router.history.push('/?location='+encodedLocation);
+			}
+		}
+		onTextChange(e){
+			this.setState({location: e.target.value});
 		}
 
 		render(){
@@ -25,7 +35,7 @@ class Nav extends React.Component{
 			var activeStyle = {
 					fontWeight:'bold',
 					color:'red'
-			}	;
+			};
 
 			return (
 				<div className="top-bar">

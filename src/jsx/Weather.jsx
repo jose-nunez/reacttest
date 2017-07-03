@@ -24,6 +24,10 @@ class Weather extends React.Component{
 		}
 	}
 
+	componentWillReceiveProps(newProps){
+		
+	}
+
 	renderMessage(){
 		var {isLoading,location,temp,errorMessage} = this.state;		
 		if(isLoading){
@@ -44,7 +48,7 @@ class Weather extends React.Component{
 	}
 
 	handleSearch(location){
-		this.setState({isLoading:true,errorMessage:null,location:null,temp:null});
+		this.setState({isLoading:true,errorMessage:'',location:'',temp:''});
 
 		openWeatherMap.getTemp(location).then(
 			(temp)=>this.setState({
@@ -55,8 +59,8 @@ class Weather extends React.Component{
 			(err)=>{
 				this.setState({
 					isLoading:false,
-					location:null,
-					temp:null,
+					location:'',
+					temp:'',
 					errorMessage:err.message
 				});
 			}
